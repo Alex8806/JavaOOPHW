@@ -40,7 +40,8 @@ public class Childrens extends Person {
         return s;
     }
 
-    public Map<Integer, String> printGrandParentsList() {;
+    public Map<Integer, String> printGrandParentsList() {
+        ;
         Map<Integer, String> s = new HashMap<>();
         for (Person ch : this.getPerentsList()
         ) {
@@ -59,6 +60,7 @@ public class Childrens extends Person {
             System.out.println(this.getName() + " " + this.getSurname() + " want to eat bosch. But there is no any!");
         }
     }
+
     public void EatSrumEgg(products prod) {
         if (prod.getScrambleEgg() > 0) {
             prod.setScrambleEgg(prod.getScrambleEgg() - 1);

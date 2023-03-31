@@ -46,7 +46,7 @@ person3.makeChildren(person2,person3);
         person3.makeChildren(person4, person5);
         System.out.println(person3);
         System.out.println(person5);
-        System.out.println("Grand parent list of " + person5.getName() + " " + person5.getSurname() + " - " + person5.printGrandParentsList());
+        System.out.println("Grandparents list of " + person5.getName() + " " + person5.getSurname() + " - " + person5.printGrandParentsList());
         Husband hus1 = new Husband("Oleg", "Petrov", 1980);
         Wife wife1 = new Wife("Maria", "Petrova", 1985, hus1);
         hus1.setWife(wife1);
