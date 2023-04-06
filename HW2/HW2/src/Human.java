@@ -1,11 +1,15 @@
-public class Human extends Creature {
+public class Human extends Creature implements PetListInerf {
+    protected PetList petList;
 
-    @Override
-    public void GetWeight(int n) {
-
+    public void takePet(Pet p1) {
+        this.takePet(this, p1);
     }
+
 
     public Human(String name, int age, int weight) {
         super(name, age, weight);
+        this.petList = null;
     }
+
+
 }

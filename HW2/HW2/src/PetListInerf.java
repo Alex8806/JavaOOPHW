@@ -1,13 +1,19 @@
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.List;
 
 public interface PetListInerf {
-    void append(Human h1, Animal a1);
-    List<Animal> petlist1 = new ArrayList<>();
-
-    default void print(List petlist1){
-        System.out.println(petlist1);
+    default void takePet(Human h1, Pet p1) {
+        if(p1.getOwner()!= null){
+            System.out.println(String.format("Previous owner of %s %s, just lost his pet",p1.getName(), p1.owner.getName()));
+            p1.owner.petList.petList.remove(p1);
+        }
+        if (h1.petList == null) {
+            h1.petList = new PetList();
+        }
+        h1.petList.petList.add(p1);
+        p1.owner = h1;
     }
 
+
+
 }
+

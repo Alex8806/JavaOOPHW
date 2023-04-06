@@ -1,26 +1,30 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class PetList implements PetListInerf {
-    private List<Animal> petList;
+public class PetList implements PetListInerf {
+    protected List<Pet> petList;
 
-    public List<Animal> getPetList() {
-        return petList;
-    }
-
-    public void setPetList(List<Animal> petList) {
-        this.petList = petList;
-    }
-
-    public PetList(List<Animal> petList) {
-        this.petList = petList;
-    }
 
     public PetList() {
-        this.petList = petList;
+        this.petList = new ArrayList<>();
     }
 
-
+    @Override
+    public String toString() {
+        if (petList == null) {
+            return null;
+        } else {
+            StringBuilder sb = new StringBuilder();
+            sb.append(" Pets:");
+            int n = 1;
+            for (Pet p : petList
+            ) {
+                sb.append(String.format(" %d %s ", n, p.getName()));
+                n++;
+            }
+            return sb.toString();
+        }
+    }
 }
 
 

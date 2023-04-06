@@ -1,9 +1,19 @@
 import java.util.List;
 
-public enum Food {
-    CAT,
-    DOG,
-    HUMAN;
+public class Food {
+    protected String name;
+    protected int n;
 
+    public Food(String name, int n) {
+        this.name = name;
+        this.n = n;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getN() {
+        return n;
+    }
 }

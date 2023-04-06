@@ -1,4 +1,4 @@
-public abstract class Creature implements GetWeight {
+public abstract class Creature implements incraseWeight {
     private String name;
     private int age;
     private int weight;
@@ -35,5 +35,10 @@ public abstract class Creature implements GetWeight {
     @Override
     public String toString() {
         return  this.getClass() + String.format(" %s with weight %d, %d years old",this.getName() ,getWeight() , getAge());
+    }
+
+    @Override
+    public void increaseWeight(int n) {
+        setWeight(aIsAplusB(this.weight, n));
     }
 }
