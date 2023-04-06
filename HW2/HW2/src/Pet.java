@@ -1,4 +1,4 @@
-public class Pet extends Animal implements PetListInerf, SpecialAction{
+public abstract class Pet extends Animal implements PetListInerf, SpecialAction{
 
  protected Human owner;
 
@@ -16,8 +16,5 @@ public class Pet extends Animal implements PetListInerf, SpecialAction{
     }
 
 
-    @Override
-    public void specialAction(int looseweight) {
 
-    }
 }

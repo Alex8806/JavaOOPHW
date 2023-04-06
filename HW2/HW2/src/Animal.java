@@ -1,10 +1,13 @@
-public abstract class Animal extends Creature implements Action, AnimalincreaseWeight {
-    private final AnimalWEight animalWEight = new AnimalWEight();
-    String sound;
+public abstract class Animal extends Creature implements Action, incraseWeight {
+    private String sound;
+
+    public String getSound() {
+        return sound;
+    }
 
     @Override
-    public void increaseWeight(int n){
-        animalWEight.increaseWeight(n);
+    public void increaseWeight(int n) {
+        super.setWeight(super.getWeight() + n);
     }
 
     public Animal(String name, int age, int weight, String sound) {

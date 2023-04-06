@@ -4,9 +4,10 @@ public class Dog extends Pet {
     }
     @Override
     public void specialAction(int n) {
+        n =4;
         if (this.getWeight() - n > 1) {
-            System.out.println(this.getClass() + " " + this.getName() + " walk on key board and loose " + n);
+            System.out.println(this.getClass() + " " + this.getName() + " destroy sleepers  and loose " + n);
             this.increaseWeight(-n);
-        } else {System.out.println(String.format("%s %s try to  walk on key board but don't have power", this.getClass(), this.getName()));}
+        } else {System.out.println(String.format("%s %s try to destroy sleepers but don't have power", this.getClass(), this.getName()));}
     }
 }

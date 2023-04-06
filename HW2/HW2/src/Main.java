@@ -13,8 +13,16 @@ public class Main {
         Irina.takePet(Barsik);
         System.out.println(Ivan.petList);
         System.out.println(Irina.petList);
-
-
-
+        System.out.println(Tuzik);
+        Actioner action = new Actioner();
+        for (int i = 0; i < 4; i++) {
+            action.animalIsMakeAction(Tuzik);
+        }
+        System.out.println(Tuzik);
+        System.out.println(Barsik);
+        for (int i = 0; i < 4; i++) {
+            action.animalIsMakeAction(Barsik);
+        }
+        System.out.println(Barsik);
     }
 }
