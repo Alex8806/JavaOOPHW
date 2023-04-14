@@ -52,7 +52,7 @@ public class Childrens extends Person {
         return s;
     }
 
-    public void EatBorsh(products prod) {
+    public void EatBorsh(Products prod) {
         if (prod.getBosch() > 0) {
             prod.setBosch(prod.getBosch() - 1);
             System.out.println(this.getName() + " " + this.getSurname() + " ate  borsch. Remain - " + prod.getBosch() + " borsch(es)");
@@ -61,7 +61,7 @@ public class Childrens extends Person {
         }
     }
 
-    public void EatSrumEgg(products prod) {
+    public void EatSrumEgg(Products prod) {
         if (prod.getScrambleEgg() > 0) {
             prod.setScrambleEgg(prod.getScrambleEgg() - 1);
             System.out.println(this.getName() + " " + this.getSurname() + " ate  scrambleEgg . Remain - " + prod.getScrambleEgg() + " scramble Egg(s)");

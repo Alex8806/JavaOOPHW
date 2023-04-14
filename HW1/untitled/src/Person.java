@@ -13,16 +13,7 @@ public class Person {
         this.surname = surname;
         this.YearOfBirth = YearOfBirth;
         this.YearOfDeath = YearOfDeath;
-        while (sex.toLowerCase().equals("male") && sex.toLowerCase().equals("female")) {
-            System.out.println("Wrong sex. Put 1- male of 2 - female");
-            Map<Integer, String> sexList = new HashMap<>();
-            sexList.put(1, "male");
-            sexList.put(2, "female");
-            Scanner s = new Scanner(System.in);
-            int n = s.nextInt();
-            sex = sexList.get(n);
-        }
-        this.sex = sex.toLowerCase();
+        this.sex= sex;
         this.ChildrenList = ChildrenList;
     }
 

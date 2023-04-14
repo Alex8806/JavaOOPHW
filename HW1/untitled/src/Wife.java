@@ -1,20 +1,27 @@
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Wife extends Childrens {
-    protected Husband husband;
+    public void setNode(Node node) {
+        this.node = node;
+    }
 
-    public Wife(String name, String surname, int YearOfBirth, Husband husband) {
+    protected Node node;
+
+    public Node getNode() {
+        return node;
+    }
+
+    public Wife(String name, String surname, int YearOfBirth) {
         super(name, surname, YearOfBirth, "female");
-        this.husband = husband;
+        this.node = null;
     }
 //public void callToShop(products prod,String s , int n){
 //        Map <String, Method>
 //
 //}
 
-    public void toMakeBorsch(products prod, int ammount) {
+    public void toMakeBorsch(Products prod, int ammount) {
         System.out.println(this.getName() + " " + this.getSurname() + " start to make " + ammount + " borsch(s)");
         Map<String, Integer> prodWeNeed = new HashMap<>();
         prodWeNeed.put("potato", 3 * ammount);
@@ -33,7 +40,7 @@ public class Wife extends Childrens {
             if (s.getValue() > prodWeHave.get(s.getKey()))
             {flag= false;
                 System.out.println("Honey, we don't have " + Math.abs(prodWeHave.get(s.getKey()) - s.getValue()) + " " + s.getKey() + " for " + ammount + " borsches");
-                husband.goToShop(s.getKey(), Math.abs(prodWeHave.get(s.getKey()) - s.getValue()), prod);
+                node.getHas().goToShop(s.getKey(), Math.abs(prodWeHave.get(s.getKey()) - s.getValue()), prod);
             }
 
         }

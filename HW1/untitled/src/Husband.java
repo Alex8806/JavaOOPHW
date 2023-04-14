@@ -1,25 +1,22 @@
-import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Husband extends Childrens{
-    protected Wife wife;
+
+    protected Node node;
+
+    public Node getNode() {
+        return node;
+    }
+    public void setNode(Node node) {
+        this.node = node;
+    }
 
     public Husband(String name, String surname, int YearOfBirth) {
         super(name, surname, YearOfBirth, "male");
-        this.wife=wife;
-    }
-
-    public Wife getWife() {
-        return wife;
-    }
-
-    public void setWife(Wife wife) {
-        this.wife = wife;
+        this.node=null;
     }
 
 
-    public void goToShop(String s, int n, products prod){
+
+    public void goToShop(String s, int n, Products prod){
 
         System.out.println("Husband is going to the shop for " + n + " " + s );
         prod.PlusSetterForAnyProd(s,n);

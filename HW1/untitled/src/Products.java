@@ -1,7 +1,4 @@
-import java.lang.reflect.Method;
-import java.util.Map;
-
-public class products {
+public class Products {
 
     private int egg;
     private int potato;
@@ -88,7 +85,7 @@ public class products {
         else {
             System.out.println("No such product");}}
 
-    public products(){
+    public Products(){
         this.beet=0;
         this.bosch=0;
         this.carrot=0;
