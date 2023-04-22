@@ -10,7 +10,7 @@ public class Main {
         System.out.println(Ivan.petList);
         Ivan.takePet(Tuzik);
         System.out.println(Ivan.petList + " " + Tuzik.getOwner()) ;
-        Irina.takePet(Barsik);
+        Ivan.takePet(Barsik);
         System.out.println(Ivan.petList);
         System.out.println(Irina.petList);
         System.out.println(Tuzik);
@@ -24,5 +24,6 @@ public class Main {
             action.animalIsMakeAction(Barsik);
         }
         System.out.println(Barsik);
+    
     }
 }
