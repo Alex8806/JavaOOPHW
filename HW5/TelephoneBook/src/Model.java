@@ -14,7 +14,8 @@ public class Model {
     public boolean load() {
         try {
             File file = new File(path);
-            FileReader fr = new FileReader(file);
+            FileReader fr = new
+                    FileReader(file);
             BufferedReader reader = new BufferedReader(fr);
             String entry = reader.readLine();
             while (entry != null) {
